@@ -63,12 +63,12 @@ func main() {
 	c := StructC{}
 	cOptimized := StructCOptimized{}
 
-	fmt.Println("Size of Struct A: ", unsafe.Sizeof(a))
-	fmt.Println("Size of Struct A Optimized: ", unsafe.Sizeof(aOptimized))
+	fmt.Println("Size of Struct A: ", unsafe.Sizeof(a))                    // 32 bytes
+	fmt.Println("Size of Struct A Optimized: ", unsafe.Sizeof(aOptimized)) // 24 bytes
 
-	fmt.Println("Size of Struct B: ", unsafe.Sizeof(b))
-	fmt.Println("Size of Struct B Optimized: ", unsafe.Sizeof(bOptimized))
+	fmt.Println("Size of Struct B: ", unsafe.Sizeof(b))                    // 32 bytes
+	fmt.Println("Size of Struct B Optimized: ", unsafe.Sizeof(bOptimized)) // 24 bytes
 
-	fmt.Println("Size of Struct C: ", unsafe.Sizeof(c))
-	fmt.Println("Size of Struct C Optimized: ", unsafe.Sizeof(cOptimized))
+	fmt.Println("Size of Struct C: ", unsafe.Sizeof(c))                    // 24 bytes
+	fmt.Println("Size of Struct C Optimized: ", unsafe.Sizeof(cOptimized)) // 16 bytes
 }
